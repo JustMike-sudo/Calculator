@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #dcb3f7;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: #f9f9f9;
+  padding: 30px 20px;   /* more top padding so display isn't cut */
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px #bebebe,
+              -7px -7px 15px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display {
+  background: #eaf6f7;            /* keep light screen look */
+  border-radius: 10px;            /* less rounded so it feels part of body */
+  padding: 10px 15px;             /* reduce padding */
+  width: 100%;
+  min-height: 70px;               /* give it a taller, balanced look */
+  text-align: right;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #333;
+  box-shadow: inset 3px 3px 6px #bebebe,
+              inset -3px -3px 6px #ffffff; /* softer inset for screen */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px); /* grid keeps balance */
+  grid-gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  background: #f9f9f9;
+  border: none;
+  border-radius: 50%;   /* <-- makes them circles */
+  font-size: 1.2rem;
+  width: 60px;          /* equal width & height = circle */
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #bebebe,
+              -6px -6px 12px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:active {
+  box-shadow: inset 6px 6px 12px #bebebe,
+              inset -6px -6px 12px #ffffff;
+}
+
+.equal {
+  grid-column: span 2;
+  border-radius: 25px;   /* pill shape */
+  background: #e89ac2;
+  color: #fff;
+  font-weight: bold;
+  height: 60px;          /* match circle height */
+}
